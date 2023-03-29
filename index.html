@@ -1,0 +1,41 @@
+<script>
+
+var audio2 = document.createElement('audio');
+audio2.src = 'http://fri.ellieirons.com/wp-     content/uploads/2012/03/machine.mp3'    ,'' ;
+
+var audio1 = document.createElement('audio');
+audio1.src = 'http://fri.ellieirons.com/wp-content/uploads/2012/03/suction.mp3';
+
+var map = new google.maps.Map(document.getElementById('map'), {
+zoom: 5,
+center: new google.maps.LatLng(40.818259, -73.950262), // Center the map at this lat/lng point
+mapTypeId: google.maps.MapTypeId.SATELLITE //Also takes ROADMAP
+});
+var offIcon = new google.maps.MarkerImage("http://fri.ellieirons.com/wp-content/uploads/2012/03/marker_sound_off_y.png");
+var onIcon = new google.maps.MarkerImage("http://fri.ellieirons.com/wp-content/uploads/2012/03/marker_sound_on_y.png");
+var marker1_edm = new google.maps.Marker({
+position: new google.maps.LatLng(40.821523, -73.949661),
+map: map,
+icon: offIcon
+});
+
+marker1_edm.mp3 = 'http://fri.ellieirons.com/wp-content/uploads/2012/03/suction.mp3';
+function markerClick1() {
+audio2.pause();
+audio1.play();
+}
+var marker2_nac = new google.maps.Marker({  
+position: new google.maps.LatLng(30.819834, -73.950455),
+map: map,
+icon: offIcon
+});
+marker2_nac.mp3 = 'http://fri.ellieirons.com/wp-content/uploads/2012/03/machine.mp3';
+function markerClick() {
+audio1.pause();
+audio2.play();
+} 
+google.maps.event.addListener(marker1_edm, 'click', markerClick1);
+google.maps.event.addListener(marker2_nac, 'click', markerClick);
+</script>       
+</body>
+</html>
