@@ -3,9 +3,10 @@
 <html>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
-    
+
     <head>
-        <style>
+    <meta charset="ISO-8859-1"> 
+    <style>
           .container {
             position: relative;
             margin: 30px;
@@ -43,8 +44,8 @@
 
         <!-- Header -->
         <div class="header">
-          <h1>TALLER FANTÁSTICO - Ecosistema 1</h1>
-          <p>Resultado interactivo de la experiencia de paisaje sonoro realiza con los cursos 606 y 706 del Instituto Técnico Industrial Piloto, en desarrollo del Ecosistema 1, del programa Crea de Idartes. Marzo de 2023.</p>
+          <h1>TALLER FANT&Aacute;STICO - Ecosistema 1</h1>
+          <p>RResultado interactivo de la experiencia de paisaje sonoro realiza con los cursos 606 y 706 del Instituto T&eacute;cnico Industrial Piloto, en desarrollo del Ecosistema 1, del programa Crea de Idartes. Marzo de 2023.</p>
         </div>
 
 
@@ -65,8 +66,7 @@
             </map>
             </div>
             <div class="box overlay">
-                <p class="event_desc">Este mapa contiene sonidos que recrean el paisaje sonoro de distintas zonas del Instituto Técnico Industrial Piloto. Los paisajes sonoros fueron imaginados, graficados en cartografía y grabadas por los estudiantes de los cursos mencionados.</p></br>
-                <p class="event_desc">Haga click para escuchar.</p>
+                <p class="event_desc">Este mapa contiene sonidos que recrean el paisaje sonoro de distintas zonas del Instituto T&eacute;cnico Industrial Piloto. Los paisajes sonoros fueron imaginados, cartografiados y grabados por los estudiantes de los cursos mencionados.</p></br><p class="event_desc">Haga click para escuchar.</p>
             </div>
    
         <h2 class="subT">Zona 1</h2>
@@ -108,6 +108,17 @@
 
     var mySoundArray = [mySound1, mySound2, mySound3, mySound4, mySound5, mySound6, mySound7, mySound8, mySound9];
     var mySoundArrayPos = 0;
+
+    var allAudio = []
+    allAudio.push(mySound1)
+    allAudio.push(mySound2)
+    allAudio.push(mySound3)
+    allAudio.push(mySound4)
+    allAudio.push(mySound5)
+    allAudio.push(mySound6)
+    allAudio.push(mySound7)
+    allAudio.push(mySound8)
+    allAudio.push(mySound9)
 
     $( "area" ).mouseenter(
       function() {
@@ -171,6 +182,14 @@
 
     $( ".overlay" ).click(function() {
       this.remove();
+      if(allAudio) {
+        for(var audio of allAudio) {
+        audio.play()
+        audio.pause()
+        audio.currentTime = 0
+        }
+      allAudio = null
+      }
     });
 
 
