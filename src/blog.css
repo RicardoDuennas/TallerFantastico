@@ -199,10 +199,11 @@ h1, h2, h3, h4, h5, h6 {
             position: relative;
             margin-bottom: 30px;
           }
+*/
           #players{
             margin-top: 60px;
           }
-*/
+
           p.event_desc {
             color: #ff9b55;
               font: bold 70px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -211,10 +212,9 @@ h1, h2, h3, h4, h5, h6 {
               vertical-align: middle;
               padding: 10px;
             }
-/*          .imgCont {
-            width: 100%;
-            min-width: 887px;
+          .imgCont {
+            margin-top: 30px;
             }
-          .imgCont img{
+/*          .imgCont img{
             width: 100%;
             }*/
