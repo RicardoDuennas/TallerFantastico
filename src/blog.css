@@ -1,3 +1,12 @@
+body{
+  background: repeat top left; 
+-webkit-background-size: 35%;
+-moz-background-size: 35%;
+-o-background-size: 35%;
+background-size: 35%;
+}
+
+
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
@@ -107,6 +116,8 @@ h1, h2, h3, h4, h5, h6 {
  */
 .blog-post {
   margin-bottom: 4rem;
+  padding:  35px;
+  background: rgba(255, 255, 255, 0.77);
 }
 .blog-post-title {
   margin-bottom: .25rem;
