@@ -176,3 +176,45 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
   }
 }
+
+/*          .container {
+            position: relative;
+            margin: 30px;
+          }
+*/          .box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .overlay {
+            width: 100%;
+            height: 400%;
+            z-index: 9;
+            margin: 0px;
+            background: #9d78e8;
+          }
+  /*        .map{
+            position: relative;
+            margin-bottom: 30px;
+          }
+          #players{
+            margin-top: 60px;
+          }
+*/
+          p.event_desc {
+            color: #ff9b55;
+              font: bold 70px "Helvetica Neue", Helvetica, Arial, sans-serif;
+              line-height: 74px;
+              margin: 0px;
+              vertical-align: middle;
+              padding: 10px;
+            }
+/*          .imgCont {
+            width: 100%;
+            min-width: 887px;
+            }
+          .imgCont img{
+            width: 100%;
+            }*/
